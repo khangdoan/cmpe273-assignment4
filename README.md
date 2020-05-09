@@ -11,6 +11,7 @@ Test code for this assignment is located in cache_client.py in the main
 Start the client first, via provided batch files or direct invocation
 
 See cache_client_output.txt for client output
+
 See cache_server_output.png for server output
 
 On the terminal enter:
