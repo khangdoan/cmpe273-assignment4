@@ -43,6 +43,8 @@ Features:
 * Add virtual node layer in the consistent hashing.
 * Implement virtual node with data replication. 
 
+Usage:
+
 ```python
 client_ring_CH = NodeRing(clients,mode='Consistent Hashing', replicas=8)
 client_ring_CH.get_node(key)
