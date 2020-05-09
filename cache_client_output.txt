@@ -1,0 +1,61 @@
+Connecting to server at 127.0.0.1:4001
+b'd0df71363130955e493c24ac0d296a75'
+Connecting to server at 127.0.0.1:4001
+b'1c84c3d6dec3775654c4573ca4df1064'
+Connecting to server at 127.0.0.1:4001
+b'e52f43cd2c23bb2e6296153748382764'
+Connecting to server at 127.0.0.1:4000
+b'9aa0c932fb8eba9a72a6ae60064a0507'
+Connecting to server at 127.0.0.1:4000
+b'6aaae4a8f8468ef61e78b4ced80fa140'
+Connecting to server at 127.0.0.1:4001
+b'd0df71363130955e493c24ac0d296a75'
+Number of Users=6
+Number of Users Cached=5
+e52f43cd2c23bb2e6296153748382764
+Connecting to server at 127.0.0.1:4001
+b'{"name": "Irish Rackers", "email": "irackers@gmail.com", "age": 22}'
+6aaae4a8f8468ef61e78b4ced80fa140
+Connecting to server at 127.0.0.1:4000
+b'{"name": "Lisbeth Stacker", "email": "lstacker@gmail.com", "age": 24}'
+1c84c3d6dec3775654c4573ca4df1064
+Connecting to server at 127.0.0.1:4001
+b'{"name": "Bari Pushard", "email": "bpushard@gmail.com", "age": 21}'
+9aa0c932fb8eba9a72a6ae60064a0507
+Connecting to server at 127.0.0.1:4000
+b'{"name": "Agueda Letsinger", "email": "aletsinger@gmail.com", "age": 23}'
+d0df71363130955e493c24ac0d296a75
+Connecting to server at 127.0.0.1:4001
+b'{"name": "John Smith", "email": "jsmith@gmail.com", "age": 20}'
+Connecting to server at 127.0.0.1:4003
+b'd0df71363130955e493c24ac0d296a75'
+Connecting to server at 127.0.0.1:4003
+b'1c84c3d6dec3775654c4573ca4df1064'
+Connecting to server at 127.0.0.1:4000
+b'e52f43cd2c23bb2e6296153748382764'
+Connecting to server at 127.0.0.1:4003
+b'9aa0c932fb8eba9a72a6ae60064a0507'
+Connecting to server at 127.0.0.1:4002
+b'6aaae4a8f8468ef61e78b4ced80fa140'
+Connecting to server at 127.0.0.1:4003
+b'd0df71363130955e493c24ac0d296a75'
+Number of Users=6
+Number of Users Cached=5
+e52f43cd2c23bb2e6296153748382764
+Connecting to server at 127.0.0.1:4000
+b'{"name": "Irish Rackers", "email": "irackers@gmail.com", "age": 22}'
+6aaae4a8f8468ef61e78b4ced80fa140
+Connecting to server at 127.0.0.1:4002
+b'{"name": "Lisbeth Stacker", "email": "lstacker@gmail.com", "age": 24}'
+1c84c3d6dec3775654c4573ca4df1064
+Connecting to server at 127.0.0.1:4003
+b'{"name": "Bari Pushard", "email": "bpushard@gmail.com", "age": 21}'
+9aa0c932fb8eba9a72a6ae60064a0507
+Connecting to server at 127.0.0.1:4003
+b'{"name": "Agueda Letsinger", "email": "aletsinger@gmail.com", "age": 23}'
+d0df71363130955e493c24ac0d296a75
+Connecting to server at 127.0.0.1:4003
+b'{"name": "John Smith", "email": "jsmith@gmail.com", "age": 20}'
+******************Server Distribution:**************
+('Consistent Hashing', {'4000': 2, '4001': 4, '4002': 0, '4003': 0})
+('Rendezvous Hashing', {'4000': 1, '4001': 0, '4002': 1, '4003': 4})
