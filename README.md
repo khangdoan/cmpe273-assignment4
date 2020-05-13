@@ -48,4 +48,6 @@ Usage:
 ```python
 client_ring_CH = NodeRing(clients,mode='Consistent Hashing', replicas=8)
 client_ring_CH.get_node(key)
+# for put operations
+client_ring_CH.get_node(key, data_byte)
 ```
