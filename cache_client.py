@@ -50,7 +50,7 @@ def put(object, clientRing):
     data, key = serialize_PUT(object)
     bloomfilter.add(key)
     # *********added diagnostic code to see sharding distribution********
-    retval = clientRing.get_node(key)
+    retval = clientRing.get_node(key,data)
     global shard_counts
     shard_counts[str(retval.port)] = shard_counts[str(retval.port)]+1
     return retval.send(data)
@@ -93,8 +93,8 @@ if __name__ == "__main__":
     # global shard_counts
     client_ring_CH = NodeRing(clients,mode='Consistent Hashing', replicas=8)
     client_ring_RH = NodeRing(clients, mode='Rendezvous Hashing')
-    for c in [client_ring_CH,client_ring_RH]:
-        process(clients,c)
+    for c in [client_ring_CH, client_ring_RH]:
+        process(clients, c)
         temp = c.mode, {i: shard_counts[i] for i in shard_counts}
         ch_rh.append(temp)
         for i in shard_counts:
@@ -102,3 +102,4 @@ if __name__ == "__main__":
     print("******************Server Distribution:**************")
     for i in ch_rh:
         print(i)
+    ####################################################################
