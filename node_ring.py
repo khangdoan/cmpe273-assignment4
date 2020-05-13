@@ -50,9 +50,9 @@ class NodeRing():
                 self.vnodeMapping[hashedID] = vnode[0]
             self.hashedNodeList.sort()
 
-    def get_node(self, key_hex):
+    def get_node(self, key_hex, data = None):
         if self.mode == 'Consistent Hashing':
-            return self.get_consistent_hash(key_hex)
+            return self.get_consistent_hash(key_hex,data)
         elif self.mode == 'Rendezvous Hashing':
             return self.get_rendezvous_hash(key_hex)
         else:
@@ -63,13 +63,23 @@ class NodeRing():
         node_index = key % len(self.nodes)
         return self.nodes[node_index]
 
-    def get_consistent_hash(self, key_hex):
+    def get_consistent_hash(self, key_hex, data):
         # search the sorted list and if found
         index = bisect(self.hashedNodeList, key_hex)
         if index == len(self.hashedNodeList):
             return self.vnodeMapping[self.hashedNodeList[0]]
         else:
-            return self.vnodeMapping[self.hashedNodeList[index]]
+            # send replicated data to next physical node
+            retVal = self.vnodeMapping[self.hashedNodeList[index]]
+            # finds the next node on the list
+            if data:
+                for mapped_key in self.vnodeMapping:
+                    if int(self.vnodeMapping[mapped_key].port) % 4 != (int(retVal.port) + 1) % 4:
+                        continue
+                    else:
+                        self.vnodeMapping[mapped_key].send(data)
+                        break
+            return retVal
 
     @classmethod
     def get_score_rh(self, key, weight, seed):
